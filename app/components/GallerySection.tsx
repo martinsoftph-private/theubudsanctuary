@@ -1,11 +1,21 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function GallerySection() {
-  const itemVariants = {
+  // 1. ADDED ": Variants" HERE to fix the "easeOut" string error
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  // 2. You correctly typed this one!
+  const container: Variants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 },
+    },
   };
 
   return (
@@ -26,17 +36,12 @@ export default function GallerySection() {
           </h2>
         </motion.div>
 
+        {/* 3. UPDATED: Passed the 'container' variants here instead of using inline variants */}
         <motion.div
+          variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          variants={{
-            show: {
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
           className="columns-1 sm:columns-2 md:columns-3 gap-8 md:gap-12"
         >
           <motion.div

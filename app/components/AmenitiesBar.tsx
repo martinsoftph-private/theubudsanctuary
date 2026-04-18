@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const AmenitiesBar = () => {
   const amenities = [
@@ -94,7 +94,8 @@ const AmenitiesBar = () => {
     },
   ];
 
-  const container = {
+  // ADDED ": Variants" HERE
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -102,7 +103,8 @@ const AmenitiesBar = () => {
     },
   };
 
-  const itemVariants = {
+  // ADDED ": Variants" HERE
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
@@ -121,7 +123,15 @@ const AmenitiesBar = () => {
             <motion.div
               variants={itemVariants}
               key={index}
-              className={`flex flex-col items-center justify-center text-center px-4 ${index !== amenities.length - 1 ? "md:border-r border-[#E8E5E1] border-dashed" : ""} ${index % 2 === 0 ? "border-r border-[#E8E5E1] border-dashed md:border-r" : ""}`}
+              className={`flex flex-col items-center justify-center text-center px-4 ${
+                index !== amenities.length - 1
+                  ? "md:border-r border-[#E8E5E1] border-dashed"
+                  : ""
+              } ${
+                index % 2 === 0
+                  ? "border-r border-[#E8E5E1] border-dashed md:border-r"
+                  : ""
+              }`}
             >
               {item.icon}
               <h3 className="text-xs font-sans tracking-widest text-[#4A4238] uppercase mt-2">
@@ -134,4 +144,5 @@ const AmenitiesBar = () => {
     </section>
   );
 };
+
 export default AmenitiesBar;
