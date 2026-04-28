@@ -195,7 +195,7 @@ export default function GallerySection() {
                               "opacity 0.3s ease, transform 0.3s ease",
                           }}
                         >
-                          {card.label}
+                          {/*card.label*/}
                         </span>
                         {/* Patchwork-style index badge */}
                         <span className="text-white/30 text-[10px] font-mono tabular-nums">
