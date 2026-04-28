@@ -110,28 +110,22 @@ const AmenitiesBar = () => {
   };
 
   return (
-    <section className="py-16 border-y border-[#E8E5E1]">
+    <section className="py-16 md:py-24 border-y border-[#E8E5E1]">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-y-12"
+          className="grid grid-cols-2 md:grid-cols-4 gap-y-12 md:gap-y-0"
         >
           {amenities.map((item, index) => (
             <motion.div
               variants={itemVariants}
               key={index}
-              className={`flex flex-col items-center justify-center text-center px-4 ${
-                index !== amenities.length - 1
-                  ? "md:border-r border-[#E8E5E1] border-dashed"
-                  : ""
-              } ${
-                index % 2 === 0
-                  ? "border-r border-[#E8E5E1] border-dashed md:border-r"
-                  : ""
-              }`}
+              className={`flex flex-col items-center justify-start text-center px-4 h-full border-[#E8E5E1] border-dashed ${
+                index !== amenities.length - 1 ? "md:border-r" : "md:border-r-0"
+              } ${index % 2 === 0 ? "border-r" : "border-r-0"}`}
             >
               {item.icon}
               <h3 className="text-xs font-sans tracking-widest text-[#4A4238] uppercase mt-2">

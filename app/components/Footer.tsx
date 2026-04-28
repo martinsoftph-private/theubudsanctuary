@@ -63,28 +63,16 @@ export default function Footer() {
               </h4>
               <div className="flex flex-col gap-3 font-serif text-2xl md:text-4xl text-[#F8F5F0]">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/theubudsanctuaryph"
                   className="hover:text-[#D4B895] transition-colors duration-300"
                 >
                   Instagram
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/theubudsanctuaryph"
                   className="hover:text-[#D4B895] transition-colors duration-300"
                 >
                   Facebook
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-[#D4B895] transition-colors duration-300"
-                >
-                  Airbnb
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-[#D4B895] transition-colors duration-300"
-                >
-                  Booking.com
                 </a>
               </div>
             </div>
@@ -95,9 +83,25 @@ export default function Footer() {
                 Address
               </h4>
               <p className="text-sm font-sans text-[#F8F5F0]/80 leading-relaxed">
-                Nasugbu, Batangas,
+                Barangay Sitio Bibisaya,
                 <br />
-                Philippines
+                Nasugbu, Philippines
+              </p>
+            </div>
+            <div className="hidden md:block">
+              <h4 className="text-[10px] font-bold tracking-widest uppercase mb-2 text-[#F8F5F0]/70">
+                Phone
+              </h4>
+              <p className="text-sm font-sans text-[#F8F5F0]/80 leading-relaxed">
+                09054530297
+              </p>
+            </div>
+            <div className="hidden md:block">
+              <h4 className="text-[10px] font-bold tracking-widest uppercase mb-2 text-[#F8F5F0]/70">
+                Email:
+              </h4>
+              <p className="text-sm font-sans text-[#F8F5F0]/80 leading-relaxed">
+                theubudsanctuaryph@gmail.com
               </p>
             </div>
           </div>

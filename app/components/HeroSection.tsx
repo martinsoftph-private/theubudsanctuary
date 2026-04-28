@@ -151,9 +151,7 @@ export default function HeroSection() {
           Discover The Sanctuary
         </h1>
         <p className="mt-8 max-w-2xl text-base md:text-lg text-[#EAE8DB] leading-relaxed drop-shadow-lg">
-          Experience a slice of Bali right on the shores of Batangas. This
-          private, Indonesian-inspired villa offers an intimate escape just
-          steps from Nasugbu&apos;s most beautiful beaches.
+          A Bali-inspired sanctuary in Tagaytay–Nasugbu where you can relax, recharge, and reconnect with nature tropically.
         </p>
       </motion.div>
 

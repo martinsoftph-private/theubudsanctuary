@@ -144,7 +144,7 @@ const TestimonialCarousel = () => {
           <div
             ref={scrollContainerRef}
             onScroll={handleScroll}
-            className="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory"
+            className="flex overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory"
           >
             {testimonials.map((t, index) => (
               <div

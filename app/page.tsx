@@ -5,6 +5,7 @@ import GallerySection from "./components/GallerySection";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import BookingSection from "./components/BookingSection";
 import Footer from "./components/Footer";
+import IntroSection2 from "./components/IntroSection2";
 
 export default function UbudSanctuaryPage() {
   return (
@@ -13,6 +14,7 @@ export default function UbudSanctuaryPage() {
         <HeroSection />
         <IntroSection />
         <AmenitiesBar />
+        <IntroSection2 />
         <GallerySection />
         <TestimonialCarousel />
         <BookingSection />

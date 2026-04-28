@@ -1,38 +1,54 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function IntroSection() {
   return (
-    <section className="py-24 border-b border-[#E5E8E1]">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="p-12 md:p-24 text-left"
-        >
-          <p className="font-serif text-3xl md:text-4xl text-[#2F3A2E] leading-relaxed max-w-lg">
-            Ready to experience this slice of heaven? Book your stay at Kamaya
-            Villa today and step into a world where every moment is a treasure
-            waiting to be discovered. Don&apos;t just dream about paradise, live
-            it!
-          </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="h-[300px] md:h-[450px] w-full"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1668957065532-5770d193d501?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?"
-            alt="A tranquil villa view with a pool and lush greenery"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
+    // Updated background color to match the cream/beige in the photo
+    <section className="py-20 min-h-screen flex items-center">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+          {/* Image Column */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <Image
+              src="/image/main-pool.png" // Ensure this path is correct
+              width={700}
+              height={700}
+              alt="Private Pool View"
+              className="rounded-2xl object-cover w-full aspect-square shadow-sm"
+            />
+          </motion.div>
+
+          {/* Text Column */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col justify-center"
+          >
+            {/* Heading: Using a serif font and larger size */}
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-4xl text-[#2D3E50] leading-[1.1] mb-8">
+              Private Pool & Outdoor Living
+            </h2>
+
+            {/* Body Text: Increased line height and slightly muted color */}
+            <p className="text-[#4A5568] text-lg md:text-lg leading-relaxed font-light max-w-lg">
+              Dive into luxury with your private infinity pool that seamlessly
+              blends with the horizon. The outdoor terrace features comfortable
+              lounging areas, perfect for morning coffee or sunset cocktails.
+              Experience the ultimate in tropical relaxation with panoramic
+              views of Siargao&apos;s pristine landscape and azure waters.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
