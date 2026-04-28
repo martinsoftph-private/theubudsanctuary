@@ -44,8 +44,8 @@ export default function IntroSection() {
               Dive into luxury with your private infinity pool that seamlessly
               blends with the horizon. The outdoor terrace features comfortable
               lounging areas, perfect for morning coffee or sunset cocktails.
-              Experience the ultimate in tropical relaxation with panoramic
-              views of Siargao&apos;s pristine landscape and azure waters.
+              {/*Experience the ultimate in tropical relaxation with panoramic
+              views of Siargao&apos;s pristine landscape and azure waters.*/}
             </p>
           </motion.div>
         </div>
